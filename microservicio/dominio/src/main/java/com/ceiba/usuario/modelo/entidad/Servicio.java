@@ -5,13 +5,16 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+@Getter
+@Setter
 @Entity
-@Table(name="servicio", schema="veterinaria")
+@Table(name="servicio")
 public class Servicio {
 
+    @Id
     @Column(name="id_servicio")
     private int idServicio;
 
@@ -25,4 +28,10 @@ public class Servicio {
     private int cantidad;
 
     public Servicio(){}
+
+    public Servicio(String nombre, String precio, int cantidad) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
 }

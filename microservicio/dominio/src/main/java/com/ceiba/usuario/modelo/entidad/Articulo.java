@@ -2,12 +2,14 @@ package com.ceiba.usuario.modelo.entidad;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="articulo", schema="veterinaria")
+@Table(name="articulo")
 public class Articulo {
 
+    @Id
     @Column(name="id_articulo")
     private int idArticulo;
 
