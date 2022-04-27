@@ -20,7 +20,7 @@ public class ServicioCrearVeterinario {
     }
 
     private void validarExistenciaPrevia(Veterinario veterinario) {
-        boolean existe = this.repositorioVeterinario.existe(veterinario.getCedula());
+        boolean existe = this.repositorioVeterinario.existe(veterinario.getCedulaVeterinario());
         if(existe) {
             throw new ExcepcionDuplicidad(EL_VETERINARIO_YA_EXISTE_EN_EL_SISTEMA);
         }

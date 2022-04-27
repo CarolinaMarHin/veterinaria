@@ -16,29 +16,26 @@ import java.util.Date;
 public class Mascota {
 
     @Id
-    @Column(name="id_mascota")
-    private int idMascota;
+    @Column(name="codigo_mascota")
+    private String codigoMascota;
 
-    @Column(name="nombre")
-    private String nombre;
+    @Column(name="nombre_mascota")
+    private String nombreMascota;
 
     @Column(name="raza")
     private String raza;
 
-    @Column(name="fecha_nacimiento")
-    private Date fechaNacimiento;
+    @Column(name="fecha_nacimiento_mascota")
+    private Date fechaNacimientoMascota;
 
     @Column(name="peso")
     private int peso;
 
-    @Column(name="codigo")
-    private String codigo;
-
-    public Mascota(String nombre, String raza, Date fechaNacimiento, int peso, String codigo) {
-        this.nombre = nombre;
+    public Mascota(String codigoMascota, String nombreMascota, String raza, Date fechaNacimientoMascota, int peso) {
+        this.codigoMascota = codigoMascota;
+        this.nombreMascota = nombreMascota;
         this.raza = raza;
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechaNacimientoMascota = fechaNacimientoMascota;
         this.peso = peso;
-        this.codigo = codigo;
     }
 }

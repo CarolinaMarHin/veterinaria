@@ -15,14 +15,13 @@ public class MapeoMascota implements RowMapper<DtoMascota>, MapperResult {
     @Override
     public DtoMascota mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 
-        int idMascota = resultSet.getInt("id_mascota");
-        String codigo = resultSet.getString("codigo");
-        String nombre = resultSet.getString("nombre");
+        String codigoMascota = resultSet.getString("codigo_mascota");
+        String nombreMascota = resultSet.getString("nombre_mascota");
         String raza = resultSet.getString("raza");
-        Date fechaNacimiento = resultSet.getDate("fecha_nacimiento");
+        Date fechaNacimientoMascota = resultSet.getDate("fecha_nacimiento_mascota");
         int peso = resultSet.getInt("peso");
 
-        return new DtoMascota(idMascota, codigo, nombre, raza, fechaNacimiento, peso);
+        return new DtoMascota(codigoMascota, nombreMascota, raza, fechaNacimientoMascota, peso);
     }
 
 }

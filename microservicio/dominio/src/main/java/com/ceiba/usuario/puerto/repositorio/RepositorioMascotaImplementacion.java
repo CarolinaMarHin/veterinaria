@@ -15,21 +15,21 @@ public class RepositorioMascotaImplementacion implements RepositorioMascota{
 
     @Override
     public void crear(Mascota mascota) {
-        entityManager.createNativeQuery("INSERT INTO Mascota(nombre, raza, fecha_nacimiento, peso, codigo) VALUES (:nombre, :raza, :fechaNacimiento, :peso, :codigo)")
-                .setParameter("nombre", mascota.getNombre())
+        entityManager.createNativeQuery("INSERT INTO Mascota(codigo_mascota, nombre_mascota, raza, fecha_nacimiento_mascota, peso) VALUES (:codigoMascota, :nombreMascota, :raza, :fechaNacimientoMascota, :peso)")
+                .setParameter("codigoMascota", mascota.getCodigoMascota())
+                .setParameter("nombreMascota", mascota.getNombreMascota())
                 .setParameter("raza", mascota.getRaza())
-                .setParameter("fechaNacimiento", mascota.getFechaNacimiento())
+                .setParameter("fechaNacimientoMascota", mascota.getFechaNacimientoMascota())
                 .setParameter("peso", mascota.getPeso())
-                .setParameter("codigo", mascota.getCodigo())
                 .executeUpdate();
     }
 
     @Override
-    public boolean existe(String codigo) {
-        List MascotaExistente = entityManager.createQuery(
-                        "SELECT codigo FROM Mascota m WHERE m.codigo = :codigo")
-                .setParameter("codigo", codigo)
+    public boolean existe(String codigoMascota) {
+        List mascotaExistente = entityManager.createQuery(
+                        "SELECT codigoMascota FROM Mascota m WHERE m.codigoMascota = :codigoMascota")
+                .setParameter("codigoMascota", codigoMascota)
                 .getResultList();
-        return !MascotaExistente.isEmpty();
+        return !mascotaExistente.isEmpty();
     }
 }

@@ -17,7 +17,7 @@ public class ManejadorObtenerMascota {
         this.daoMascota = daoMascota;
     }
 
-    public DtoMascota ejecutar(String codigo){
-        return this.daoMascota.obtenerMascota(codigo);
+    public DtoMascota ejecutar(String codigoMascota){
+        return this.daoMascota.obtenerMascota(codigoMascota);
     }
 }

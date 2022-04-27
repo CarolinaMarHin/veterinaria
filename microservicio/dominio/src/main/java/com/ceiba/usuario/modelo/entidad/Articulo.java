@@ -1,29 +1,34 @@
 package com.ceiba.usuario.modelo.entidad;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Getter
+@Setter
 @Entity
 @Table(name="articulo")
 public class Articulo {
 
     @Id
-    @Column(name="id_articulo")
-    private int idArticulo;
+    @Column(name="codigo_articulo")
+    private String codigoArticulo;
 
-    @Column(name="precio")
-    private int precio;
+    @Column(name="nombre_articulo")
+    private String nombreArticulo;
 
-    @Column(name="cantidad")
-    private int cantidad;
-
-    @Column(name="id_servicio")
-    private int idServicio;
-
-    @Column(name="id_factura")
-    private int idFactura;
+    @Column(name="precio_articulo")
+    private String precioArticulo;
 
     public Articulo(){}
+
+    public Articulo(String codigoArticulo, String nombreArticulo, String precioArticulo) {
+        this.codigoArticulo = codigoArticulo;
+        this.nombreArticulo = nombreArticulo;
+        this.precioArticulo = precioArticulo;
+    }
 }

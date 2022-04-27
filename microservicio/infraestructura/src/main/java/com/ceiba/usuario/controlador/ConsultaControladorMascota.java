@@ -24,8 +24,8 @@ public class ConsultaControladorMascota {
     }
 
     @GetMapping(value="/obtenerMascotaCodigo")
-    public DtoMascota obtenerMascota(@RequestParam String codigo) {
-        return this.manejadorObtenerMascota.ejecutar(codigo);
+    public DtoMascota obtenerMascota(@RequestParam String codigoMascota) {
+        return this.manejadorObtenerMascota.ejecutar(codigoMascota);
     }
 
 }

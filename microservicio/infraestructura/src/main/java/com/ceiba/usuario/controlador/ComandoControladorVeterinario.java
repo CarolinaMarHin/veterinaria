@@ -1,6 +1,5 @@
 package com.ceiba.usuario.controlador;
 
-import com.ceiba.usuario.comando.manejador.ManejadorCrearServicio;
 import com.ceiba.usuario.comando.manejador.ManejadorCrearVeterinario;
 import com.ceiba.usuario.modelo.dto.DtoVeterinario;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,8 +8,9 @@ import java.util.Date;
 @Getter
 @Setter
 public class DtoAgenda {
-    private int idAgenda;
-    private Date fechaCita;
+    private String codigoAgenda;
+    private Date fechaAgenda;
+    private String estadoAgenda;
 
     public DtoAgenda(){}
 }

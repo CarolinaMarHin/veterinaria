@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DtoServicio {
-    private int idServicio;
-    private String nombre;
-    private String precio;
-    private int cantidad;
+    private String codigoServicio;
+    private String nombreServicio;
+    private String precioServicio;
+    private String codigoArticulo;
 
     public DtoServicio(){}
 }

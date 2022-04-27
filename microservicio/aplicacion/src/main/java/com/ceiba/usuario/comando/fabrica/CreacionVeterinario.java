@@ -11,13 +11,13 @@ import java.sql.Date;
 @Service
 public class CreacionVeterinario {
     public Veterinario crear(DtoVeterinario dtoVeterinario) {
-        long fechaNacimientoSql = dtoVeterinario.getFechaNacimiento().getTime();
-        Date fechaNacimientoBD = new Date(fechaNacimientoSql);
+        long fechaNacimientoVeterinarioSql = dtoVeterinario.getFechaNacimientoVeterinario().getTime();
+        Date fechaNacimientoVeterinarioBD = new Date(fechaNacimientoVeterinarioSql);
 
         return new Veterinario(
-                dtoVeterinario.getNombre(),
-                dtoVeterinario.getCedula(),
-                fechaNacimientoBD
+                dtoVeterinario.getNombreVeterinario(),
+                dtoVeterinario.getCedulaVeterinario(),
+                fechaNacimientoVeterinarioBD
         );
     }
 

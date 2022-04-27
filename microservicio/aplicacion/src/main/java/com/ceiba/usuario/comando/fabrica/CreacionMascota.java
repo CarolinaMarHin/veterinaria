@@ -9,15 +9,15 @@ import java.sql.Date;
 @Service
 public class CreacionMascota {
     public Mascota crear(DtoMascota dtoMascota) {
-        long fechaNacimientoSql = dtoMascota.getFechaNacimiento().getTime();
-        Date fechaNacimientoBD = new Date(fechaNacimientoSql);
+        long fechaNacimientoMascotaSql = dtoMascota.getFechaNacimientoMascota().getTime();
+        Date fechaNacimientoMascotaBD = new Date(fechaNacimientoMascotaSql);
 
         return new Mascota(
-                dtoMascota.getNombre(),
+                dtoMascota.getCodigoMascota(),
+                dtoMascota.getNombreMascota(),
                 dtoMascota.getRaza(),
-                fechaNacimientoBD,
-                dtoMascota.getPeso(),
-                dtoMascota.getCodigo()
+                fechaNacimientoMascotaBD,
+                dtoMascota.getPeso()
         );
     }
 

@@ -4,5 +4,5 @@ import com.ceiba.usuario.modelo.entidad.Mascota;
 
 public interface RepositorioMascota {
     void crear(Mascota mascota);
-    boolean existe(String nombre);
+    boolean existe(String codigoMascota);
 }

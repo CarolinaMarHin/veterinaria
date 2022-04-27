@@ -6,11 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DtoCita {
-    private int idCita;
-    private int idAgenda;
-    private int idMascota;
-    private int idVeterinario;
-    private int idServicio;
+    private String codigoCita;
+    private String codigoAgenda;
+    private String codigoMascota;
+    private String cedulaVeterinario;
+    private String codigoServicio;
 
     public DtoCita(){}
 }

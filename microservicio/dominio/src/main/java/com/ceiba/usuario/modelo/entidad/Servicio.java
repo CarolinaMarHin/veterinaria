@@ -27,11 +27,15 @@ public class Servicio {
     @Column(name="cantidad")
     private int cantidad;
 
+    @Column(name="codigo")
+    private String codigo;
+
     public Servicio(){}
 
-    public Servicio(String nombre, String precio, int cantidad) {
+    public Servicio(String nombre, String precio, int cantidad, String codigo) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
+        this.codigo = codigo;
     }
 }

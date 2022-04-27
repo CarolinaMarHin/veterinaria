@@ -16,22 +16,20 @@ import java.sql.Date;
 public class Veterinario {
 
     @Id
-    @Column(name="id_veterinario")
-    private int idVeterinario;
+    @Column(name="cedula_veterinario")
+    private String cedulaVeterinario;
 
-    @Column(name="nombre")
-    private String nombre;
+    @Column(name="nombre_veterinario")
+    private String nombreVeterinario;
 
-    @Column(name="cedula")
-    private String cedula;
-
-    @Column(name="fecha_nacimiento")
-    private Date fechaNacimiento;
+    @Column(name="fecha_nacimiento_veterinario")
+    private Date fechaNacimientoVeterinario;
 
     public Veterinario(){}
-    public Veterinario(String nombre, String cedula, Date fechaNacimiento) {
-        this.nombre = nombre;
-        this.cedula = cedula;
-        this.fechaNacimiento = fechaNacimiento;
+
+    public Veterinario(String cedulaVeterinario, String nombreVeterinario, Date fechaNacimientoVeterinario) {
+        this.cedulaVeterinario = cedulaVeterinario;
+        this.nombreVeterinario = nombreVeterinario;
+        this.fechaNacimientoVeterinario = fechaNacimientoVeterinario;
     }
 }

@@ -8,10 +8,9 @@ import java.util.Date;
 @Getter
 @Setter
 public class DtoVeterinario {
-    private int idVeterinario;
-    private String nombre;
-    private String cedula;
-    private Date fechaNacimiento;
+    private String nombreVeterinario;
+    private String cedulaVeterinario;
+    private Date fechaNacimientoVeterinario;
 
     public DtoVeterinario(){}
 }

@@ -15,18 +15,18 @@ public class RepositorioVeterinarioImplementacion implements RepositorioVeterina
 
     @Override
     public void crear(Veterinario veterinario) {
-        entityManager.createNativeQuery("INSERT INTO Veterinario(nombre, cedula, fecha_nacimiento) VALUES (:nombre, :cedula, :fechaNacimiento)")
-                .setParameter("nombre", veterinario.getNombre())
-                .setParameter("cedula", veterinario.getCedula())
-                .setParameter("fechaNacimiento", veterinario.getFechaNacimiento())
+        entityManager.createNativeQuery("INSERT INTO Veterinario(nombre_veterinario, cedula_veterinario, fecha_nacimiento_veterinario) VALUES (:nombreVeterinario, :cedulaVeterinario, :fechaNacimientoVeterinario)")
+                .setParameter("nombreVeterinario", veterinario.getNombreVeterinario())
+                .setParameter("cedulaVeterinario", veterinario.getCedulaVeterinario())
+                .setParameter("fechaNacimientoVeterinario", veterinario.getFechaNacimientoVeterinario())
                 .executeUpdate();
     }
 
     @Override
-    public boolean existe(String cedula) {
+    public boolean existe(String cedulaVeterinario) {
         List veterinarioExistente = entityManager.createQuery(
-                        "SELECT cedula FROM Veterinario v WHERE v.cedula = :cedula")
-                .setParameter("cedula", cedula)
+                        "SELECT cedulaVeterinario FROM Veterinario v WHERE v.cedulaVeterinario = :cedulaVeterinario")
+                .setParameter("cedulaVeterinario", cedulaVeterinario)
                 .getResultList();
         return !veterinarioExistente.isEmpty();
     }

@@ -15,7 +15,7 @@ public class DaoUsuarioMysql implements DaoUsuario {
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace="veterinaria", value="obtener")
+    @SqlStatement(namespace="veterinaria", value="obtenerMascota")
     private static String sqlListar;
 
     public DaoUsuarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
