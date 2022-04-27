@@ -10,7 +10,7 @@ import java.util.Date;
 public class DtoAgenda {
     private String codigoAgenda;
     private Date fechaAgenda;
-    private String estadoAgenda;
+    private boolean estadoAgenda;
 
     public DtoAgenda(){}
 }

@@ -1,9 +1,6 @@
 package com.ceiba.configuracion;
 
-import com.ceiba.usuario.puerto.repositorio.RepositorioFactura;
-import com.ceiba.usuario.puerto.repositorio.RepositorioMascota;
-import com.ceiba.usuario.puerto.repositorio.RepositorioArticulo;
-import com.ceiba.usuario.puerto.repositorio.RepositorioVeterinario;
+import com.ceiba.usuario.puerto.repositorio.*;
 import com.ceiba.usuario.servicio.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +26,11 @@ public class BeanServicio {
     @Bean
     public ServicioCrearFactura servicioCrearFactura(RepositorioFactura repositorioFactura) {
         return new ServicioCrearFactura(repositorioFactura);
+    }
+
+    @Bean
+    public ServicioCrearAgenda servicioCrearAgenda(RepositorioAgenda repositorioAgenda) {
+        return new ServicioCrearAgenda(repositorioAgenda);
     }
     /*@Bean
     public ServicioCrearUsuario servicioCrearUsuario(RepositorioUsuario repositorioUsuario) {
