@@ -7,9 +7,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Date;
+import java.sql.Date;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name="veterinario")
 public class Veterinario {
@@ -28,4 +29,9 @@ public class Veterinario {
     private Date fechaNacimiento;
 
     public Veterinario(){}
+    public Veterinario(String nombre, String cedula, Date fechaNacimiento) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.fechaNacimiento = fechaNacimiento;
+    }
 }

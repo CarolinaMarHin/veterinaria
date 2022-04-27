@@ -28,6 +28,6 @@ public class RepositorioServicioImplementacion implements RepositorioServicio{
                         "SELECT nombre FROM Servicio s WHERE s.nombre = :nombre")
                 .setParameter("nombre", nombre)
                 .getResultList();
-        return serviciosExistente == null;
+        return !serviciosExistente.isEmpty();
     }
 }

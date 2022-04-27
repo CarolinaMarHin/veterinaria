@@ -17,6 +17,7 @@ spring:
       jdbcUrl: jdbc:mysql://localhost:3306/veterinaria?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTime
       username: root
       password: admin
+      spring.jpa.hibernate.ddl-auto: update
       spring.flyway.baselineOnMigrate: true
       hikari:
          poolName: pool
