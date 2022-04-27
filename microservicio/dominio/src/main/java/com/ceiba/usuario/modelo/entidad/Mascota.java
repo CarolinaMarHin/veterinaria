@@ -9,7 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name="mascota")
 public class Mascota {
@@ -30,5 +31,14 @@ public class Mascota {
     @Column(name="peso")
     private int peso;
 
-    public Mascota(){}
+    @Column(name="codigo")
+    private String codigo;
+
+    public Mascota(String nombre, String raza, Date fechaNacimiento, int peso, String codigo) {
+        this.nombre = nombre;
+        this.raza = raza;
+        this.fechaNacimiento = fechaNacimiento;
+        this.peso = peso;
+        this.codigo = codigo;
+    }
 }

@@ -1,0 +1,1 @@
+select id_mascota, codigo, nombre, raza, fecha_nacimiento, peso from mascota where mascota.codigo = :codigo

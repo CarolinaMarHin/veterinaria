@@ -8,19 +8,19 @@ public class ServicioCrearVeterinario {
 
     private static final String EL_VETERINARIO_YA_EXISTE_EN_EL_SISTEMA = "El veterinario ya existe en el sistema";
 
-    private RepositorioVeterinario repositorioValidacion;
+    private RepositorioVeterinario repositorioVeterinario;
 
-    public ServicioCrearVeterinario(RepositorioVeterinario repositorioValidacion) {
-        this.repositorioValidacion = repositorioValidacion;
+    public ServicioCrearVeterinario(RepositorioVeterinario repositorioVeterinario) {
+        this.repositorioVeterinario = repositorioVeterinario;
     }
 
     public void ejecutar(Veterinario veterinario) {
         validarExistenciaPrevia(veterinario);
-        this.repositorioValidacion.crear(veterinario);
+        this.repositorioVeterinario.crear(veterinario);
     }
 
     private void validarExistenciaPrevia(Veterinario veterinario) {
-        boolean existe = this.repositorioValidacion.existe(veterinario.getCedula());
+        boolean existe = this.repositorioVeterinario.existe(veterinario.getCedula());
         if(existe) {
             throw new ExcepcionDuplicidad(EL_VETERINARIO_YA_EXISTE_EN_EL_SISTEMA);
         }

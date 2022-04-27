@@ -1,0 +1,30 @@
+package com.ceiba.usuario.controlador;
+
+import com.ceiba.usuario.comando.manejador.ManejadorCrearMascota;
+import com.ceiba.usuario.comando.manejador.ManejadorCrearVeterinario;
+import com.ceiba.usuario.modelo.dto.DtoMascota;
+import com.ceiba.usuario.modelo.dto.DtoVeterinario;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/mascota")
+public class ComandoControladorMascota {
+
+    private final ManejadorCrearMascota manejadorCrearMascota;
+
+    @Autowired
+    public ComandoControladorMascota(ManejadorCrearMascota manejadorCrearMascota) {
+        this.manejadorCrearMascota = manejadorCrearMascota;
+    }
+
+    @PostMapping
+    public String crearMascota(@RequestBody DtoMascota dtoMascota) {
+        manejadorCrearMascota.ejecutar(dtoMascota);
+        return "Se creo la Mascota" ;
+    }
+
+}
