@@ -32,10 +32,12 @@ public class BeanServicio {
     public ServicioCrearAgenda servicioCrearAgenda(RepositorioAgenda repositorioAgenda) {
         return new ServicioCrearAgenda(repositorioAgenda);
     }
-    /*@Bean
-    public ServicioCrearUsuario servicioCrearUsuario(RepositorioUsuario repositorioUsuario) {
-        return new ServicioCrearUsuario(repositorioUsuario);
+
+    @Bean
+    public ServicioCrearServicio servicioCrearServicio(RepositorioServicio repositorioServicio) {
+        return new ServicioCrearServicio(repositorioServicio);
     }
+    /*
 
     @Bean
     public ServicioEliminarUsuario servicioEliminarUsuario(RepositorioUsuario repositorioUsuario) {

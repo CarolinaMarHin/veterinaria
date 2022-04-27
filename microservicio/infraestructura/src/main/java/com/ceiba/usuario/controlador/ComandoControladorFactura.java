@@ -1,6 +1,7 @@
 package com.ceiba.usuario.controlador;
 
 import com.ceiba.usuario.comando.manejador.ManejadorCrearFactura;
+import com.ceiba.usuario.comando.manejador.ManejadorCrearServicio;
 import com.ceiba.usuario.modelo.dto.DtoFactura;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,16 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class ComandoControladorFactura {
 
     private final ManejadorCrearFactura manejadorCrearFactura;
+    private final ManejadorCrearServicio manejadorCrearServicio;
 
     @Autowired
-    public ComandoControladorFactura(ManejadorCrearFactura manejadorCrearFactura) {
+    public ComandoControladorFactura(ManejadorCrearFactura manejadorCrearFactura, ManejadorCrearServicio manejadorCrearServicio) {
         this.manejadorCrearFactura = manejadorCrearFactura;
+        this.manejadorCrearServicio = manejadorCrearServicio;
     }
 
     @PostMapping
     public String crearFactura(@RequestBody DtoFactura dtoFactura) {
+        manejadorCrearServicio.ejecutar(dtoFactura.getServicios(), dtoFactura.getNumeroFactura());
         manejadorCrearFactura.ejecutar(dtoFactura);
-        return "Se creo el Factura" ;
+        return "Se creo la Factura" ;
     }
 
 }

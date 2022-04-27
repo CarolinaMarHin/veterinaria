@@ -1,6 +1,7 @@
 package com.ceiba.usuario.puerto.repositorio;
 
 import com.ceiba.usuario.modelo.entidad.Factura;
+import com.ceiba.usuario.modelo.entidad.Servicio;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -14,7 +15,7 @@ public class RepositorioFacturaImplementacion implements RepositorioFactura{
     private EntityManager entityManager;
 
     @Override
-    public void crear(List<Factura> facturas) {
+    public void crearFactura(List<Factura> facturas) {
         facturas.forEach(factura -> {
             entityManager.createNativeQuery("INSERT INTO Factura(total_factura, fecha_compra, codigo_mascota, codigo_servicio, numero_factura) VALUES (:total_factura, :fecha_compra, :codigo_mascota, :codigo_servicio, :numero_factura)")
                     .setParameter("total_factura", factura.getTotalFactura())

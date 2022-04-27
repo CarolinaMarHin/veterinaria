@@ -15,27 +15,28 @@ import javax.persistence.Table;
 public class Servicio {
 
     @Id
-    @Column(name="id_servicio")
-    private int idServicio;
+    @Column(name="codigo_servicio")
+    private String codigoServicio;
 
-    @Column(name="nombre")
-    private String nombre;
+    @Column(name="nombre_servicio")
+    private String nombreServicio;
 
-    @Column(name="precio")
-    private String precio;
+    @Column(name="precio_servicio")
+    private String precioServicio;
 
-    @Column(name="cantidad")
-    private int cantidad;
+    @Column(name="codigo_factura")
+    private String codigoFactura;
 
-    @Column(name="codigo")
-    private String codigo;
+    @Column(name="codigo_articulo")
+    private String codigoArticulo;
 
     public Servicio(){}
 
-    public Servicio(String nombre, String precio, int cantidad, String codigo) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.cantidad = cantidad;
-        this.codigo = codigo;
+    public Servicio(String codigoServicio, String nombreServicio, String precioServicio, String codigoFactura, String codigoArticulo) {
+        this.codigoServicio = codigoServicio;
+        this.nombreServicio = nombreServicio;
+        this.precioServicio = precioServicio;
+        this.codigoFactura = codigoFactura;
+        this.codigoArticulo = codigoArticulo;
     }
 }

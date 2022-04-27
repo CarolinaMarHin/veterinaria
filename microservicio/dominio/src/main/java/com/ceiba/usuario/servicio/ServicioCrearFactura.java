@@ -1,7 +1,7 @@
 package com.ceiba.usuario.servicio;
 
-import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.usuario.modelo.entidad.Factura;
+import com.ceiba.usuario.modelo.entidad.Servicio;
 import com.ceiba.usuario.puerto.repositorio.RepositorioFactura;
 
 import java.util.List;
@@ -16,7 +16,7 @@ public class ServicioCrearFactura {
         this.repositorioFactura = repositorioFactura;
     }
 
-    public void ejecutar(List<Factura> factura) {
-        this.repositorioFactura.crear(factura);
+    public void ejecutar(List<Factura> facturas) {
+        this.repositorioFactura.crearFactura(facturas);
     }
 }
