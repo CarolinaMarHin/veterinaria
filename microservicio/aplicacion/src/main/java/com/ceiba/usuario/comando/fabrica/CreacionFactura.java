@@ -2,7 +2,6 @@ package com.ceiba.usuario.comando.fabrica;
 
 import com.ceiba.usuario.modelo.dto.DtoFactura;
 import com.ceiba.usuario.modelo.entidad.Factura;
-import com.ceiba.usuario.modelo.entidad.Servicio;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;

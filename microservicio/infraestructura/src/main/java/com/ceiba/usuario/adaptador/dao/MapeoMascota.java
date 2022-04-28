@@ -2,12 +2,10 @@ package com.ceiba.usuario.adaptador.dao;
 
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import com.ceiba.usuario.modelo.dto.DtoMascota;
-import com.ceiba.usuario.modelo.dto.DtoUsuario;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class MapeoMascota implements RowMapper<DtoMascota>, MapperResult {

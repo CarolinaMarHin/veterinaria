@@ -1,7 +1,6 @@
 package com.ceiba.usuario.puerto.repositorio;
 
 import com.ceiba.usuario.modelo.entidad.Factura;
-import com.ceiba.usuario.modelo.entidad.Servicio;
 
 import java.util.List;
 

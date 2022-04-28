@@ -1,7 +1,6 @@
 package com.ceiba.usuario.puerto.repositorio;
 
 import com.ceiba.usuario.modelo.entidad.Agenda;
-import com.ceiba.usuario.modelo.entidad.Articulo;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

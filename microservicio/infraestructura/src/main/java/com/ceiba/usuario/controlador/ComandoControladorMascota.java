@@ -1,9 +1,7 @@
 package com.ceiba.usuario.controlador;
 
 import com.ceiba.usuario.comando.manejador.ManejadorCrearMascota;
-import com.ceiba.usuario.comando.manejador.ManejadorCrearVeterinario;
 import com.ceiba.usuario.modelo.dto.DtoMascota;
-import com.ceiba.usuario.modelo.dto.DtoVeterinario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

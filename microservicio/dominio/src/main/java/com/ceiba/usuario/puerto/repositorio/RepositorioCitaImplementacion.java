@@ -1,6 +1,5 @@
 package com.ceiba.usuario.puerto.repositorio;
 
-import com.ceiba.usuario.modelo.entidad.Agenda;
 import com.ceiba.usuario.modelo.entidad.Cita;
 import org.springframework.stereotype.Repository;
 

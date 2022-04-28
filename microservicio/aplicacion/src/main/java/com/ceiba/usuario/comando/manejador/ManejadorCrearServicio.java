@@ -1,7 +1,6 @@
 package com.ceiba.usuario.comando.manejador;
 
 import com.ceiba.ComandoRespuesta;
-import com.ceiba.manejador.ManejadorComandoRespuesta;
 import com.ceiba.manejador.ManejadorComandoRespuestaServicio;
 import com.ceiba.usuario.comando.fabrica.CreacionServicio;
 import com.ceiba.usuario.modelo.dto.DtoServicio;
