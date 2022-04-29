@@ -8,6 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
@@ -34,7 +35,7 @@ class ComandoControladorVeterinario {
     @DisplayName("Deberia crear un veterinario")
     void deberiaCrearUnVeterinario() throws Exception{
         ComandoVeterinario veterinario = new ComandoVeterinarioTestDataBuilder().build();
-        mocMvc.perform(post("/mascota")
+        mocMvc.perform(post("/veterinario")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(veterinario)))
                 .andExpect(status().isOk());

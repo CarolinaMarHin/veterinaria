@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
@@ -30,8 +31,6 @@ class ConsultaControladorUsuarioTest {
     @Test
     @DisplayName("Deberia listar usuarios")
     void deberiaListarUsuarios() throws Exception {
-        // arrange
-        // act - assert
         mocMvc.perform(get("/usuarios")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -40,6 +39,4 @@ class ConsultaControladorUsuarioTest {
                 .andExpect(jsonPath("$[0].id", is(1)));
 
     }
-
-
 }

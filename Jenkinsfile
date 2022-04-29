@@ -22,18 +22,6 @@ pipeline{
             }
         }
 
-        stage('Static Code Analysis') {
-        			steps{
-                        echo '------------>Análisis de código estático<-----------'
-
-        				sonarqubeMasQualityGatesP(
-                            sonarKey:'co.com.ceiba:adn:veterinaria.carolina.marin',
-                            sonarName:'''"CeibaADN-Veterinaria(carolina.marin)"''',
-                            sonarPathProperties:'./sonar-project.properties'
-                        )
-        			}
-        		}
-
         stage('Compilacion y Test Unitarios'){
 
             steps{
@@ -51,6 +39,17 @@ pipeline{
 
         }
 
+        stage('Static Code Analysis') {
+        			steps{
+                        echo '------------>Análisis de código estático<-----------'
+
+        				sonarqubeMasQualityGatesP(
+                            sonarKey:'co.com.ceiba:adn:veterinaria.carolina.marin',
+                            sonarName:'''"CeibaADN-Veterinaria(carolina.marin)"''',
+                            sonarPathProperties:'./sonar-project.properties'
+                        )
+        			}
+        		}
 
         stage('Build'){
             steps{

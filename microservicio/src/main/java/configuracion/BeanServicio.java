@@ -42,17 +42,5 @@ public class BeanServicio {
     public ServicioCrearCita servicioCrearCita(RepositorioCita repositorioCita) {
         return new ServicioCrearCita(repositorioCita);
     }
-    /*
-
-    @Bean
-    public ServicioEliminarUsuario servicioEliminarUsuario(RepositorioUsuario repositorioUsuario) {
-        return new ServicioEliminarUsuario(repositorioUsuario);
-    }
-
-    @Bean
-    public ServicioActualizarUsuario servicioActualizarUsuario(RepositorioUsuario repositorioUsuario) {
-        return new ServicioActualizarUsuario(repositorioUsuario);
-    }*/
-	
 
 }

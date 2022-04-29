@@ -11,7 +11,7 @@ public class ServicioCrearAgenda {
 
     private static final String EL_AGENDA_YA_EXISTE_EN_EL_SISTEMA = "El Agenda ya existe en el sistema";
 
-    private RepositorioAgenda repositorioAgenda;
+    private final RepositorioAgenda repositorioAgenda;
 
     @Autowired
     public ServicioCrearAgenda(RepositorioAgenda repositorioAgenda) {
