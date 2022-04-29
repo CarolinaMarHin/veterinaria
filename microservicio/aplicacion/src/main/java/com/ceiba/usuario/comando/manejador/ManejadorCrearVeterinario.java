@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ManejadorCrearVeterinario implements ManejadorComandoRespuesta<DtoVeterinario, ComandoRespuesta<Long>> {
 
-    private CreacionVeterinario creacionVeterinario;
-    private ServicioCrearVeterinario servicioCrearVeterinario;
+    private final CreacionVeterinario creacionVeterinario;
+    private final ServicioCrearVeterinario servicioCrearVeterinario;
 
     @Autowired
     public ManejadorCrearVeterinario(CreacionVeterinario creacionVeterinario, ServicioCrearVeterinario servicioCrearVeterinario) {

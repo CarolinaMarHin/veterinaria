@@ -3,13 +3,17 @@ package com.ceiba.usuario.servicio;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.usuario.modelo.entidad.Agenda;
 import com.ceiba.usuario.puerto.repositorio.RepositorioAgenda;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ServicioCrearAgenda {
 
     private static final String EL_AGENDA_YA_EXISTE_EN_EL_SISTEMA = "El Agenda ya existe en el sistema";
 
     private RepositorioAgenda repositorioAgenda;
 
+    @Autowired
     public ServicioCrearAgenda(RepositorioAgenda repositorioAgenda) {
         this.repositorioAgenda = repositorioAgenda;
     }

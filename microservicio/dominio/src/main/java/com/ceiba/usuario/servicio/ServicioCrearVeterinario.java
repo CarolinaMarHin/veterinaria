@@ -3,13 +3,17 @@ package com.ceiba.usuario.servicio;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.usuario.modelo.entidad.Veterinario;
 import com.ceiba.usuario.puerto.repositorio.RepositorioVeterinario;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ServicioCrearVeterinario {
 
     private static final String EL_VETERINARIO_YA_EXISTE_EN_EL_SISTEMA = "El veterinario ya existe en el sistema";
 
-    private RepositorioVeterinario repositorioVeterinario;
+    private final RepositorioVeterinario repositorioVeterinario;
 
+    @Autowired
     public ServicioCrearVeterinario(RepositorioVeterinario repositorioVeterinario) {
         this.repositorioVeterinario = repositorioVeterinario;
     }

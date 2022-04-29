@@ -3,9 +3,11 @@ package com.ceiba.usuario.servicio;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.usuario.modelo.entidad.Servicio;
 import com.ceiba.usuario.puerto.repositorio.RepositorioServicio;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ServicioCrearServicio {
 
     private static final String EL_SERVICIO_YA_EXISTE_EN_EL_SISTEMA = "El Servicio ya existe en el sistema";
