@@ -4,6 +4,7 @@ import com.ceiba.usuario.modelo.entidad.Cita;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
@@ -12,6 +13,7 @@ public class RepositorioCitaImplementacion implements RepositorioCita {
     private static final int CITA_ASIGNADA = 1;
     private static final int CITA_NO_ASIGNADA = 0;
 
+    @PersistenceContext
     private EntityManager entityManager;
 
     @Override

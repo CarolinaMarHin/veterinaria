@@ -4,11 +4,13 @@ import com.ceiba.usuario.modelo.entidad.Articulo;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
 public class RepositorioArticuloImplementacion implements RepositorioArticulo {
 
+    @PersistenceContext
     private EntityManager entityManager;
 
     @Override
