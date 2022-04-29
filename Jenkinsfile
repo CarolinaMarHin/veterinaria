@@ -23,6 +23,9 @@ pipeline{
         }
 
         stage('Static Code Analysis') {
+                    environment {
+                        scannerHome = tool 'Sonar scanner'
+                    }
         			steps{
 
                         echo '------------>Análisis de código estático<------------'
@@ -33,15 +36,16 @@ pipeline{
                             sonarPathProperties:'./sonar-project.properties'
                         )
         			}
-        		}
-        stage("Quality Gate") {
                     steps {
-                        timeout(time: 1, unit: 'MINUTES') {
-                            waitForQualityGate abortPipeline: true
-                        }
+                        withSonarQubeEnv('Sonarserver') {
+                            sh "${scannerHome}/bin/sonar-scanner"
+                          }
+                        if ("${json.projectStatus.status}" == "ERROR") {
+                                    currentBuild.result = 'FAILURE'
+                                    error('Pipeline aborted due to quality gate failure.')
+                            }
                     }
-                }
-
+        		}
 
         stage('Compilacion y Test Unitarios'){
 
