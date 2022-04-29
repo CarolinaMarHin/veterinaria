@@ -1,11 +1,12 @@
-package com.ceiba.usuario.modelo.dto;
+package com.ceiba.usuario.comando;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Getter
-@NoArgsConstructor
-public class DtoArticulo {
+@AllArgsConstructor
+public class ComandoArticulo {
+
     private String codigoArticulo;
     private String nombreArticulo;
     private String precioArticulo;

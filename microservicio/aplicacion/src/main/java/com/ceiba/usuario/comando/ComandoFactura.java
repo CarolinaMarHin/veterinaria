@@ -1,14 +1,15 @@
-package com.ceiba.usuario.modelo.dto;
+package com.ceiba.usuario.comando;
 
+import com.ceiba.usuario.modelo.dto.DtoServicio;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
 
 @Getter
-@NoArgsConstructor
-public class DtoFactura {
+@AllArgsConstructor
+public class ComandoFactura {
     private int codigoFactura;
     private int totalFactura;
     private Date fechaCompra;

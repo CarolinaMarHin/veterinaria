@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class DtoServicio {
     private String codigoServicio;
     private String nombreServicio;

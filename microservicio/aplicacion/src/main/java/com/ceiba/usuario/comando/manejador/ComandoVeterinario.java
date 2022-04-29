@@ -1,13 +1,14 @@
-package com.ceiba.usuario.modelo.dto;
+package com.ceiba.usuario.comando.manejador;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Getter
-@NoArgsConstructor
-public class DtoVeterinario {
+@AllArgsConstructor
+public class ComandoVeterinario {
+
     private String nombreVeterinario;
     private String cedulaVeterinario;
     private Date fechaNacimientoVeterinario;

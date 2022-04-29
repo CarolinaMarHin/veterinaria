@@ -1,8 +1,8 @@
 package com.ceiba.usuario.controlador;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.usuario.comando.ComandoMascota;
-import com.ceiba.usuario.servicio.testdatabuilder.ComandoMascotaTestDataBuilder;
+import com.ceiba.usuario.comando.ComandoFactura;
+import com.ceiba.usuario.servicio.testdatabuilder.ComandoFacturaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,10 +19,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(ComandoControladorMascota.class)
+@WebMvcTest(ComandoControladorFactura.class)
 @ContextConfiguration(classes= ApplicationMock.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class ComandoControladorMascotaTest {
+class ComandoControladorFacturaTest {
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -31,12 +31,12 @@ class ComandoControladorMascotaTest {
     private MockMvc mocMvc;
 
     @Test
-    @DisplayName("Deberia crear una mascota")
-    void deberiaCrearUnaMascota() throws Exception{
-        ComandoMascota mascota = new ComandoMascotaTestDataBuilder().build();
+    @DisplayName("Deberia crear una factura")
+    void deberiaCrearUnaFactura() throws Exception{
+        ComandoFactura factura = new ComandoFacturaTestDataBuilder().build();
         mocMvc.perform(post("/mascota")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(mascota)))
+                .content(objectMapper.writeValueAsString(factura)))
                 .andExpect(status().isOk());
     }
 }
