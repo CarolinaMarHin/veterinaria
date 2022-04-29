@@ -35,8 +35,7 @@ pipeline{
                             sonarName:'''"CeibaADN-Veterinaria(carolina.marin)"''',
                             sonarPathProperties:'./sonar-project.properties'
                         )
-        			}
-                    steps {
+
                         withSonarQubeEnv('Sonarserver') {
                             sh "${scannerHome}/bin/sonar-scanner"
                           }
@@ -44,7 +43,7 @@ pipeline{
                                     currentBuild.result = 'FAILURE'
                                     error('Pipeline aborted due to quality gate failure.')
                             }
-                    }
+        			}
         		}
 
         stage('Compilacion y Test Unitarios'){
