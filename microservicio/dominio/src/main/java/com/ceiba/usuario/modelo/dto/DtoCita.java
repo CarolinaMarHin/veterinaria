@@ -1,15 +1,15 @@
 package com.ceiba.usuario.modelo.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
 public class DtoCita {
     private String codigoCita;
     private String codigoAgenda;
     private String codigoMascota;
     private String cedulaVeterinario;
     private String codigoServicio;
-
-    public DtoCita(){}
 }

@@ -2,6 +2,7 @@ package com.ceiba.usuario.modelo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -12,5 +13,4 @@ public class DtoUsuario {
     private String nombre;
     private String clave;
     private LocalDateTime fechaCreacion;
-
 }

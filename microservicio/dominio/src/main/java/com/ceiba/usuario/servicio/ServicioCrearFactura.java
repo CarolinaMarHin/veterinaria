@@ -8,9 +8,6 @@ import java.util.List;
 
 @Service
 public class ServicioCrearFactura {
-
-    private static final String EL_FACTURA_YA_EXISTE_EN_EL_SISTEMA = "La factura ya existe en el sistema";
-
     private RepositorioFactura repositorioFactura;
 
     public ServicioCrearFactura(RepositorioFactura repositorioFactura) {
