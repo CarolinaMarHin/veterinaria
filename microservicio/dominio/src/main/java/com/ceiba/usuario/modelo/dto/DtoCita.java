@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
 public class DtoCita {
     private String codigoCita;
     private String codigoAgenda;

@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
 public class DtoServicio {
     private String codigoServicio;
     private String nombreServicio;

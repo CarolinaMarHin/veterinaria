@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 
 @Getter
-@Setter
 public class DtoFactura {
     private int codigoFactura;
     private int totalFactura;

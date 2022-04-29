@@ -10,22 +10,19 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Getter
-@Setter
 @Entity
 @Table(name="agenda")
 public class Agenda {
 
     @Id
     @Column(name="codigo_agenda")
-    private String codigoAgenda;
+    private final String codigoAgenda;
 
     @Column(name="fecha_agenda")
-    private Date fechaAgenda;
+    private final Date fechaAgenda;
 
     @Column(name="estado_agenda")
-    private boolean estadoAgenda;
-
-    public Agenda(){}
+    private final boolean estadoAgenda;
 
     public Agenda(String codigoAgenda, Date fechaAgenda, boolean estadoAgenda) {
         this.codigoAgenda = codigoAgenda;

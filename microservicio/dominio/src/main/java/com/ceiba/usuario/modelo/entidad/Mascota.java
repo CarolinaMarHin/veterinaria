@@ -10,7 +10,6 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Getter
-@Setter
 @Entity
 @Table(name="mascota")
 public class Mascota {

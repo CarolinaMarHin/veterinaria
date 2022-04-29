@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Getter
-@Setter
 @Entity
 @Table(name="cita")
 public class Cita {
