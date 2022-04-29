@@ -24,10 +24,6 @@ pipeline{
 
         stage('Static Code Analysis') {
         			steps{
-
-                        environment {
-                            scannerHome = tool 'Sonar scanner'
-                        }
                         echo '------------>Análisis de código estático<------------'
 
         				sonarqubeMasQualityGatesP(
@@ -35,14 +31,6 @@ pipeline{
                             sonarName:'''"CeibaADN-Veterinaria(carolina.marin)"''',
                             sonarPathProperties:'./sonar-project.properties'
                         )
-
-                        withSonarQubeEnv('Sonarserver') {
-                            sh "${scannerHome}/bin/sonar-scanner"
-                          }
-                        if ("${json.projectStatus.status}" == "ERROR") {
-                                    currentBuild.result = 'FAILURE'
-                                    error('Pipeline aborted due to quality gate failure.')
-                            }
         			}
         		}
 
