@@ -23,11 +23,11 @@ pipeline{
         }
 
         stage('Static Code Analysis') {
-                    environment {
-                        scannerHome = tool 'Sonar scanner'
-                    }
         			steps{
 
+                        environment {
+                            scannerHome = tool 'Sonar scanner'
+                        }
                         echo '------------>Análisis de código estático<------------'
 
         				sonarqubeMasQualityGatesP(
