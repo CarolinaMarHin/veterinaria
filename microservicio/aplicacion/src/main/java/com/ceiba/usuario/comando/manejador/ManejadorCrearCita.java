@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ManejadorCrearCita implements ManejadorComandoRespuesta<DtoCita, ComandoRespuesta<Long>> {
-
+public class ManejadorCrearCita {
+// implements ManejadorComandoRespuesta<DtoCita, ComandoRespuesta<Long>>
     private CreacionCita creacionCita;
     private ServicioCrearCita servicioCrearCita;
 

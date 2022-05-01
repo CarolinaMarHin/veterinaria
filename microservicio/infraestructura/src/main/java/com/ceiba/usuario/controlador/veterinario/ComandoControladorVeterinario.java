@@ -1,4 +1,4 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.veterinario;
 
 import com.ceiba.usuario.comando.manejador.ManejadorCrearVeterinario;
 import com.ceiba.usuario.modelo.dto.DtoVeterinario;

@@ -2,13 +2,13 @@ package com.ceiba.usuario.controlador;
 
 import com.ceiba.ApplicationMock;
 import com.ceiba.usuario.comando.ComandoArticulo;
+import com.ceiba.usuario.controlador.articulo.ComandoControladorArticulo;
 import com.ceiba.usuario.servicio.testdatabuilder.ComandoArticuloTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;

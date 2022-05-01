@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public class RepositorioMascotaImplementacion implements RepositorioMascota{
 
-    @PersistenceContext
+    //@PersistenceContext
     private EntityManager entityManager;
 
     @Override

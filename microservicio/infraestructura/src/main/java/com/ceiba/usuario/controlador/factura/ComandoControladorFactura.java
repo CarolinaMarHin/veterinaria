@@ -1,4 +1,4 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.factura;
 
 import com.ceiba.usuario.comando.manejador.ManejadorCrearFactura;
 import com.ceiba.usuario.comando.manejador.ManejadorCrearServicio;

@@ -1,7 +1,9 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.agenda;
 
+import com.ceiba.ComandoRespuesta;
 import com.ceiba.usuario.comando.manejador.ManejadorCrearAgenda;
 import com.ceiba.usuario.modelo.dto.DtoAgenda;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,9 +22,9 @@ public class ComandoControladorAgenda {
     }
 
     @PostMapping
-    public String crearAgenda(@RequestBody DtoAgenda dtoAgenda) {
-        manejadorCrearAgenda.ejecutar(dtoAgenda);
-        return "Se creo el Agenda";
+    @ApiOperation("Crear Agenda")
+    public ComandoRespuesta<Long> crearAgenda(@RequestBody DtoAgenda dtoAgenda) {
+        return manejadorCrearAgenda.ejecutar(dtoAgenda);
     }
 
 }

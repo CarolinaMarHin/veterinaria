@@ -30,8 +30,7 @@ public class RepositorioAgendaImplementacion implements RepositorioAgenda {
 
 
     @Override
-    public long crear(Agenda agenda) {
-        long test = this.customNamedParameterJdbcTemplate.crear(agenda, sqlCrearAgenda);
+    public Long crear(Agenda agenda) {
         return this.customNamedParameterJdbcTemplate.crear(agenda, sqlCrearAgenda);
     }
 

@@ -1,4 +1,4 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.articulo;
 
 import com.ceiba.usuario.comando.manejador.ManejadorCrearArticulo;
 import com.ceiba.usuario.modelo.dto.DtoArticulo;

@@ -7,9 +7,9 @@ import com.ceiba.usuario.comando.fabrica.FabricaUsuario;
 import com.ceiba.usuario.modelo.entidad.Usuario;
 import com.ceiba.usuario.servicio.ServicioCrearUsuario;
 import org.springframework.stereotype.Component;
-
+//implements ManejadorComandoRespuesta<ComandoUsuario, ComandoRespuesta<Long>>
 @Component
-public class ManejadorCrearUsuario implements ManejadorComandoRespuesta<ComandoUsuario, ComandoRespuesta<Long>> {
+public class ManejadorCrearUsuario {
 
     private final FabricaUsuario fabricaUsuario;
     private final ServicioCrearUsuario servicioCrearUsuario;

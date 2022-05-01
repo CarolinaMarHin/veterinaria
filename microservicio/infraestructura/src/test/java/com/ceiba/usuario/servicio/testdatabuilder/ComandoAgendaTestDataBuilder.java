@@ -2,7 +2,9 @@ package com.ceiba.usuario.servicio.testdatabuilder;
 
 import com.ceiba.usuario.comando.ComandoAgenda;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.UUID;
 
 public class ComandoAgendaTestDataBuilder {
@@ -12,8 +14,8 @@ public class ComandoAgendaTestDataBuilder {
     private final boolean estadoAgenda;
 
     public ComandoAgendaTestDataBuilder() {
-        codigoAgenda = UUID.randomUUID().toString();
-        fechaAgenda = new Date();
+        codigoAgenda = UUID.randomUUID().toString().substring(1, 8);
+        fechaAgenda = new GregorianCalendar(2022, Calendar.MAY, 04).getTime();
         estadoAgenda = false;
 
     }

@@ -13,7 +13,7 @@ public class RepositorioCitaImplementacion implements RepositorioCita {
     private static final int CITA_ASIGNADA = 1;
     private static final int CITA_NO_ASIGNADA = 0;
 
-    @PersistenceContext
+    //@PersistenceContext
     private EntityManager entityManager;
 
     @Override

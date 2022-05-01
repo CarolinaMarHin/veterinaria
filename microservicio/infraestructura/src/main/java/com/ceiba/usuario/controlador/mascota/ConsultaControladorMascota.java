@@ -1,4 +1,4 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.mascota;
 
 import com.ceiba.usuario.consulta.ManejadorObtenerMascota;
 import com.ceiba.usuario.modelo.dto.DtoMascota;

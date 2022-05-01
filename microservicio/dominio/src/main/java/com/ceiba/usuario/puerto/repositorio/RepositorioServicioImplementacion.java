@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public class RepositorioServicioImplementacion implements RepositorioServicio {
 
-    @PersistenceContext
+   // @PersistenceContext
     private EntityManager entityManager;
 
     @Override

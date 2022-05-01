@@ -9,7 +9,7 @@ import javax.persistence.PersistenceContext;
 @Repository
 public class RepositorioUsuarioImplementacion implements RepositorioUsuario {
 
-    @PersistenceContext
+    //@PersistenceContext
     private EntityManager entityManager;
 
     @Override

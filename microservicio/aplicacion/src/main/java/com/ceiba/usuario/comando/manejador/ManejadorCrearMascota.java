@@ -8,9 +8,9 @@ import com.ceiba.usuario.modelo.entidad.Mascota;
 import com.ceiba.usuario.servicio.ServicioCrearMascota;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
+// implements ManejadorComandoRespuesta<DtoMascota, ComandoRespuesta<Long>>
 @Component
-public class ManejadorCrearMascota implements ManejadorComandoRespuesta<DtoMascota, ComandoRespuesta<Long>> {
+public class ManejadorCrearMascota {
 
     private final CreacionMascota creacionMascota;
     private final ServicioCrearMascota servicioCrearMascota;

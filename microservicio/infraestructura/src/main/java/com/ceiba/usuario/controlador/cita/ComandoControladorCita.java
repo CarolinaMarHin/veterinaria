@@ -1,4 +1,4 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.cita;
 
 import com.ceiba.usuario.comando.manejador.ManejadorCrearCita;
 import com.ceiba.usuario.modelo.dto.DtoCita;

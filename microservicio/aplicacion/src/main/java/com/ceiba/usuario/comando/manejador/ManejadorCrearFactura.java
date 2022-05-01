@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class ManejadorCrearFactura implements ManejadorComandoRespuesta<DtoFactura, ComandoRespuesta<Long>> {
-
+public class ManejadorCrearFactura {
+// implements ManejadorComandoRespuesta<DtoFactura, ComandoRespuesta<Long>>
     private CreacionFactura creacionFactura;
     private ServicioCrearFactura servicioCrearFactura;
 

@@ -21,8 +21,8 @@ public class ManejadorCrearAgenda implements ManejadorComandoRespuesta<DtoAgenda
         this.servicioCrearAgenda = servicioCrearAgenda;
     }
 
-    public void ejecutar(DtoAgenda dtoAgenda) {
+    public ComandoRespuesta<Long>  ejecutar(DtoAgenda dtoAgenda) {
        Agenda agenda = this.creacionAgenda.crear(dtoAgenda);
-       this.servicioCrearAgenda.ejecutar(agenda);
+       return new ComandoRespuesta<>(this.servicioCrearAgenda.ejecutar(agenda));
     }
 }

@@ -21,7 +21,7 @@ public class ServicioCrearAgenda {
         this.repositorioAgenda = repositorioAgenda;
     }
 
-    public long ejecutar(Agenda agenda) {
+    public Long ejecutar(Agenda agenda) {
         validarExistenciaPrevia(agenda);
         return this.repositorioAgenda.crear(agenda);
     }

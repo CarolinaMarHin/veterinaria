@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public class RepositorioArticuloImplementacion implements RepositorioArticulo {
 
-    @PersistenceContext
+    //@PersistenceContext
     private EntityManager entityManager;
 
     @Override
