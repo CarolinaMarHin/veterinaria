@@ -1,9 +1,8 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.articulo;
 
 import com.ceiba.ApplicationMock;
 import com.ceiba.usuario.comando.ComandoArticulo;
-import com.ceiba.usuario.controlador.articulo.ComandoControladorArticulo;
-import com.ceiba.usuario.servicio.testdatabuilder.ComandoArticuloTestDataBuilder;
+import com.ceiba.usuario.servicio.testdatabuilder.articulo.ComandoArticuloTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,6 +16,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
@@ -38,6 +38,7 @@ class ComandoControladorArticuloTest {
         mocMvc.perform(post("/articulo")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(articulo)))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(content().json("{'valor': 1}"));
     }
 }

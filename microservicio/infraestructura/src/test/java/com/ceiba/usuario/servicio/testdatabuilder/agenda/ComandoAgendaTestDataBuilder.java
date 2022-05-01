@@ -1,4 +1,4 @@
-package com.ceiba.usuario.servicio.testdatabuilder;
+package com.ceiba.usuario.servicio.testdatabuilder.agenda;
 
 import com.ceiba.usuario.comando.ComandoAgenda;
 

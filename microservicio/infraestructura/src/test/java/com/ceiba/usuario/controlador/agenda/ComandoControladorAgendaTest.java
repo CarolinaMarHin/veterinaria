@@ -1,9 +1,8 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.agenda;
 
 import com.ceiba.ApplicationMock;
 import com.ceiba.usuario.comando.ComandoAgenda;
-import com.ceiba.usuario.controlador.agenda.ComandoControladorAgenda;
-import com.ceiba.usuario.servicio.testdatabuilder.ComandoAgendaTestDataBuilder;
+import com.ceiba.usuario.servicio.testdatabuilder.agenda.ComandoAgendaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
