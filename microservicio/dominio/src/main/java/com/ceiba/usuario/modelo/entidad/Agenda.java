@@ -1,6 +1,7 @@
 package com.ceiba.usuario.modelo.entidad;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,13 +16,13 @@ public class Agenda {
 
     @Id
     @Column(name="codigo_agenda")
-    private final String codigoAgenda;
+    private String codigoAgenda;
 
     @Column(name="fecha_agenda")
-    private final Date fechaAgenda;
+    private Date fechaAgenda;
 
     @Column(name="estado_agenda")
-    private final boolean estadoAgenda;
+    private boolean estadoAgenda;
 
     public Agenda(String codigoAgenda, Date fechaAgenda, boolean estadoAgenda) {
         this.codigoAgenda = codigoAgenda;

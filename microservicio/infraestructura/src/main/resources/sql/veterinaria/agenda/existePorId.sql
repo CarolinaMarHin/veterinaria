@@ -1,0 +1,1 @@
+SELECT codigo_agenda, fecha_agenda, estado_agenda FROM agenda a WHERE a.codigo_agenda = :codigoAgenda

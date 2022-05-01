@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.sql.Types;
 
 @Repository
 public class CustomNamedParameterJdbcTemplate {
