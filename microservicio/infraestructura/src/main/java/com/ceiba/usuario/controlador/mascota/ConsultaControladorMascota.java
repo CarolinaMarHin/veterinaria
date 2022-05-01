@@ -2,11 +2,9 @@ package com.ceiba.usuario.controlador.mascota;
 
 import com.ceiba.usuario.consulta.ManejadorObtenerMascota;
 import com.ceiba.usuario.modelo.dto.DtoMascota;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/mascota")
@@ -19,8 +17,9 @@ public class ConsultaControladorMascota {
         this.manejadorObtenerMascota = manejadorObtenerMascota;
     }
 
-    @GetMapping(value="/obtenerMascotaCodigo")
-    public DtoMascota obtenerMascota(@RequestParam String codigoMascota) {
+    @GetMapping(value="/obtenerMascotaCodigo/{codigoMascota}")
+    @ApiOperation("Obtener mascota")
+    public DtoMascota obtenerMascota(@PathVariable String codigoMascota) {
         return this.manejadorObtenerMascota.ejecutar(codigoMascota);
     }
 
