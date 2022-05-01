@@ -1,9 +1,9 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.usuario.controlador.mascota;
 
 import com.ceiba.ApplicationMock;
 import com.ceiba.usuario.comando.ComandoMascota;
 import com.ceiba.usuario.controlador.mascota.ComandoControladorMascota;
-import com.ceiba.usuario.servicio.testdatabuilder.ComandoMascotaTestDataBuilder;
+import com.ceiba.usuario.servicio.testdatabuilder.mascota.ComandoMascotaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,6 +17,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
@@ -38,6 +39,7 @@ class ComandoControladorMascotaTest {
         mocMvc.perform(post("/mascota")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(mascota)))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(content().json("{'valor': 1}"));
     }
 }

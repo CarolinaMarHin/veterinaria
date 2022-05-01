@@ -18,9 +18,9 @@ public class ServicioCrearMascota {
         this.repositorioMascota = repositorioMascota;
     }
 
-    public void ejecutar(Mascota mascota) {
+    public Long ejecutar(Mascota mascota) {
         validarExistenciaPrevia(mascota);
-        this.repositorioMascota.crear(mascota);
+        return this.repositorioMascota.crear(mascota);
     }
 
     private void validarExistenciaPrevia(Mascota mascota) {

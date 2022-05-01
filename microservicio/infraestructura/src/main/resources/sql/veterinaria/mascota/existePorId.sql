@@ -1,0 +1,1 @@
+SELECT codigo_mascota, nombre_mascota, raza, fecha_nacimiento_mascota, peso FROM mascota m WHERE m.codigo_mascota = :codigoMascota

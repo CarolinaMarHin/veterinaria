@@ -29,6 +29,7 @@ public class Mascota {
     @Column(name="peso")
     private int peso;
 
+    public Mascota(){}
     public Mascota(String codigoMascota, String nombreMascota, String raza, Date fechaNacimientoMascota, int peso) {
         this.codigoMascota = codigoMascota;
         this.nombreMascota = nombreMascota;

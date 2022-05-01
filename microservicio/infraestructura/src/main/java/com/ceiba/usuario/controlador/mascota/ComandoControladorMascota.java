@@ -1,5 +1,6 @@
 package com.ceiba.usuario.controlador.mascota;
 
+import com.ceiba.ComandoRespuesta;
 import com.ceiba.usuario.comando.manejador.ManejadorCrearMascota;
 import com.ceiba.usuario.modelo.dto.DtoMascota;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,8 @@ public class ComandoControladorMascota {
     }
 
     @PostMapping
-    public String crearMascota(@RequestBody DtoMascota dtoMascota) {
-        manejadorCrearMascota.ejecutar(dtoMascota);
-        return "Se creo la Mascota" ;
+    public ComandoRespuesta<Long> crearMascota(@RequestBody DtoMascota dtoMascota) {
+        return manejadorCrearMascota.ejecutar(dtoMascota);
     }
 
 }

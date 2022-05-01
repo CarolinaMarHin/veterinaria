@@ -6,9 +6,9 @@ import java.util.UUID;
 
 public class ComandoArticuloTestDataBuilder {
 
-    private String codigoArticulo;
-    private String nombreArticulo;
-    private String precioArticulo;
+    private final String codigoArticulo;
+    private final String nombreArticulo;
+    private final String precioArticulo;
 
     public ComandoArticuloTestDataBuilder() {
         codigoArticulo = UUID.randomUUID().toString().substring(1, 8);

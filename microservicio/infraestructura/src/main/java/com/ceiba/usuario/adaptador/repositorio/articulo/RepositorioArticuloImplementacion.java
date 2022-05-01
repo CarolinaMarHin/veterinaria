@@ -1,4 +1,4 @@
-package com.ceiba.usuario.adaptador.repositorio;
+package com.ceiba.usuario.adaptador.repositorio.articulo;
 
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
@@ -34,25 +34,4 @@ public class RepositorioArticuloImplementacion implements RepositorioArticulo {
         paramSource.addValue("codigoArticulo", codigoArticulo);
         return !this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlExisteArticulo, paramSource, new MapeoArticulo()).isEmpty();
     }
-
-    /*@PersistenceContext
-    private EntityManager entityManager;
-
-    @Override
-    public void crear(Articulo articulo) {
-        entityManager.createNativeQuery("INSERT INTO Articulo(codigo_articulo, nombre_articulo, precio_articulo) VALUES (:codigo_articulo, :nombre_articulo, :precio_articulo)")
-                .setParameter("codigo_articulo", articulo.getCodigoArticulo())
-                .setParameter("nombre_articulo", articulo.getNombreArticulo())
-                .setParameter("precio_articulo", articulo.getPrecioArticulo())
-                .executeUpdate();
-    }
-
-    @Override
-    public boolean existe(String codigoArticulo) {
-        List articulosExistente = entityManager.createQuery(
-                        "SELECT codigo_articulo FROM Articulo a WHERE a.codigo_articulo = :codigoArticulo")
-                .setParameter("codigoArticulo", codigoArticulo)
-                .getResultList();
-        return !articulosExistente.isEmpty();
-    }*/
 }
