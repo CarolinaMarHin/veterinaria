@@ -18,9 +18,9 @@ public class ServicioCrearArticulo {
         this.repositorioArticulo = repositorioArticulo;
     }
 
-    public void ejecutar(Articulo articulo) {
+    public Long ejecutar(Articulo articulo) {
         validarExistenciaPrevia(articulo);
-        this.repositorioArticulo.crear(articulo);
+        return this.repositorioArticulo.crear(articulo);
     }
 
     private void validarExistenciaPrevia(Articulo articulo) {

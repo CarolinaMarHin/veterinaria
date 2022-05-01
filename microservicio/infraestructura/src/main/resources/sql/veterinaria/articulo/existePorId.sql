@@ -1,0 +1,1 @@
+SELECT codigo_articulo, nombre_articulo, precio_articulo FROM articulo a WHERE a.codigo_articulo = :codigoArticulo

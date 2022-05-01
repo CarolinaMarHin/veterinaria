@@ -21,8 +21,8 @@ public class ManejadorCrearArticulo{
         this.servicioCrearArticulo = servicioCrearArticulo;
     }
 
-    public void ejecutar(DtoArticulo dtoArticulo) {
+    public ComandoRespuesta<Long> ejecutar(DtoArticulo dtoArticulo) {
        Articulo articulo = this.creacionArticulo.crear(dtoArticulo);
-       this.servicioCrearArticulo.ejecutar(articulo);
+        return new ComandoRespuesta<>(this.servicioCrearArticulo.ejecutar(articulo));
     }
 }

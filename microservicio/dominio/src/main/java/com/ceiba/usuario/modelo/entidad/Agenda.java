@@ -10,18 +10,18 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Getter
-//@Entity
-//@Table(name="agenda")
+@Entity
+@Table(name="agenda")
 public class Agenda {
 
-    //@Id
-    //@Column(name="codigo_agenda")
+    @Id
+    @Column(name="codigo_agenda")
     private String codigoAgenda;
 
-    //@Column(name="fecha_agenda")
+    @Column(name="fecha_agenda")
     private Date fechaAgenda;
 
-    //@Column(name="estado_agenda")
+    @Column(name="estado_agenda")
     private boolean estadoAgenda;
 
     public Agenda(String codigoAgenda, Date fechaAgenda, boolean estadoAgenda) {

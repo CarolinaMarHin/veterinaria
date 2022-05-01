@@ -1,5 +1,6 @@
 package com.ceiba.usuario.controlador.articulo;
 
+import com.ceiba.ComandoRespuesta;
 import com.ceiba.usuario.comando.manejador.ManejadorCrearArticulo;
 import com.ceiba.usuario.modelo.dto.DtoArticulo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,8 @@ public class ComandoControladorArticulo {
     }
 
     @PostMapping
-    public String crearArticulo(@RequestBody DtoArticulo dtoArticulo) {
-        manejadorCrearArticulo.ejecutar(dtoArticulo);
-        return "Se creo el articulo";
+    public ComandoRespuesta<Long> crearArticulo(@RequestBody DtoArticulo dtoArticulo) {
+        return manejadorCrearArticulo.ejecutar(dtoArticulo);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.ceiba.usuario.adaptador.dao;
+package com.ceiba.usuario.adaptador.dao.agenda;
 
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import com.ceiba.usuario.modelo.dto.DtoAgenda;
