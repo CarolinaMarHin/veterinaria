@@ -1,7 +1,5 @@
 package com.ceiba.usuario.comando.manejador;
 
-import com.ceiba.ComandoRespuesta;
-import com.ceiba.manejador.ManejadorComandoRespuesta;
 import com.ceiba.usuario.comando.fabrica.CreacionCita;
 import com.ceiba.usuario.modelo.dto.DtoCita;
 import com.ceiba.usuario.modelo.entidad.Cita;

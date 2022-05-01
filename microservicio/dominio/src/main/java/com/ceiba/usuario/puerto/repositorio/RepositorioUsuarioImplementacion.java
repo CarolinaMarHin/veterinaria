@@ -4,7 +4,6 @@ import com.ceiba.usuario.modelo.entidad.Usuario;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 @Repository
 public class RepositorioUsuarioImplementacion implements RepositorioUsuario {

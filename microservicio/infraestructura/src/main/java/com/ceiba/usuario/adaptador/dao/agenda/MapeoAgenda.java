@@ -2,7 +2,6 @@ package com.ceiba.usuario.adaptador.dao.agenda;
 
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import com.ceiba.usuario.modelo.dto.DtoAgenda;
-import com.ceiba.usuario.modelo.dto.DtoMascota;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

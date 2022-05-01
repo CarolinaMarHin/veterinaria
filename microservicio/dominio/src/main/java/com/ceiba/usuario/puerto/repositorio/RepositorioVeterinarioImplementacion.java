@@ -4,7 +4,6 @@ import com.ceiba.usuario.modelo.entidad.Veterinario;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
