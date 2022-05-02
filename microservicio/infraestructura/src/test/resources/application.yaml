@@ -14,7 +14,7 @@ spring:
    datasource:
       driver-class-name: com.mysql.jdbc.Driver
       type: com.zaxxer.hikari.HikariDataSource
-      jdbcUrl: jdbc:mysql://localhost:3306/veterinaria_bd?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTime
+      url: jdbc:mysql://127.0.0.1:3306/veterinaria_bd?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTime
       username: root
       password: admin
       spring.jpa.hibernate.ddl-auto: update
