@@ -4,7 +4,6 @@ import com.ceiba.usuario.modelo.entidad.Cita;
 import com.ceiba.usuario.puerto.repositorio.RepositorioCita;
 import org.springframework.stereotype.Service;
 
-@Service
 public class ServicioCrearCita {
 
     private static final String LA_CITA_SE_HA_ASIGNADO = "La cita ya esta agendada";

@@ -6,7 +6,6 @@ import com.ceiba.usuario.puerto.repositorio.RepositorioArticulo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
 public class ServicioCrearArticulo {
 
     private static final String EL_ARTICULO_YA_EXISTE_EN_EL_SISTEMA = "El articulo ya existe en el sistema";

@@ -6,7 +6,6 @@ import com.ceiba.usuario.puerto.repositorio.RepositorioVeterinario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
 public class ServicioCrearVeterinario {
 
     private static final String EL_VETERINARIO_YA_EXISTE_EN_EL_SISTEMA = "El veterinario ya existe en el sistema";

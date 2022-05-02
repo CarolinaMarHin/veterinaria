@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class ServicioCrearServicio {
 
     private static final String EL_SERVICIO_YA_EXISTE_EN_EL_SISTEMA = "El Servicio ya existe en el sistema";

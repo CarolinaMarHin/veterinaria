@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.Calendar;
 import java.util.Date;
 
-@Service
 public class ServicioCrearAgenda {
 
     private static final String LA_AGENDA_YA_EXISTE_EN_EL_SISTEMA = "La Agenda ya existe en el sistema";
