@@ -17,7 +17,6 @@ public class DaoMascotaMysql implements DaoMascota {
     @SqlStatement(namespace="veterinaria/mascota", value="obtenerMascota")
     private static String sqlObtenerMascota;
 
-    @Autowired
     public DaoMascotaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }

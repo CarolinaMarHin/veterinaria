@@ -12,9 +12,9 @@ import java.io.IOException;
 
 @ComponentScan("com.ceiba")
 public class ApplicationMock {
-	
 
-   @Bean
+
+    @Bean
     public DataSource h2DataSource() {
         return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).build();
     }
