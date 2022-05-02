@@ -4,6 +4,7 @@ import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.usuario.modelo.dto.DtoMascota;
 import com.ceiba.usuario.puerto.dao.DaoMascota;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Component;
@@ -16,6 +17,7 @@ public class DaoMascotaMysql implements DaoMascota {
     @SqlStatement(namespace="veterinaria/mascota", value="obtenerMascota")
     private static String sqlObtenerMascota;
 
+    @Autowired
     public DaoMascotaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
