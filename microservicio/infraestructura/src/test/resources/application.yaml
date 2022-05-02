@@ -1,3 +1,15 @@
+jasypt:
+   encryptor:
+      password: ${jasyptpwd:secretkey}
+      algorithm: PBEWithMD5AndDES
+
+server:
+   port: 8443
+   servlet:
+      context-path: /veterinaria
+      session:
+         timeout: 21600s
+
 spring:
    datasource:
       driver-class-name: com.mysql.jdbc.Driver
@@ -8,3 +20,8 @@ spring:
       spring.jpa.hibernate.ddl-auto: update
       hikari:
          poolName: pool
+   mvc:
+      pathmatch:
+         matching-strategy: ant_path_matcher
+   main:
+      allow-bean-definition-overriding: true
