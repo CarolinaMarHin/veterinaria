@@ -25,13 +25,15 @@ repositories {
 }
 
 dependencies {
+	testImplementation project.ext.h2
 	testImplementation project.ext.mockitocore
 	testImplementation project.ext.mockitoinline
 	testImplementation project.ext.mockitojupiter
 	testImplementation project.ext.springboottest
 	implementation project.ext.springbootweb
 	implementation project.ext.swagger
-
+	implementation('io.springfox:springfox-swagger2:3.0.0')
+	implementation('io.springfox:springfox-swagger-ui:2.8.0')
 	implementation project.ext.apachecommons
 	implementation project.ext.springbootjdbc
 	runtimeOnly project.ext.db

@@ -6,11 +6,10 @@ spring:
       username: root
       password: admin
       spring.jpa.hibernate.ddl-auto: update
-      spring.flyway.baselineOnMigrate: true
       hikari:
          poolName: pool
-   mvc:
-      pathmatch:
-         matching-strategy: ant_path_matcher
-   main:
-      allow-bean-definition-overriding: true
+      mvc:
+         pathmatch:
+            matching-strategy: ant_path_matcher
+      main:
+         allow-bean-definition-overriding: true
